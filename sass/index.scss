@@ -1,0 +1,79 @@
+
+@import "./components/nav-bar";
+@import "./group-mixin/group-mixin";
+@import "./variable/variable";
+@import "./components/footer";
+@import "./components/catagery-card";
+.banner-1{
+    height: 450px;
+    display: flex;
+    background-color: #94F3F7;
+    .description{
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: $title;
+            background-color: $teal;
+            color: $white;
+            padding: 15px;
+            border-radius: 20px 0;
+        }
+        @include centered;
+        width: 60%;
+        flex-direction: column;
+        gap:20px;
+    }
+}
+.banner-2{
+    .category{
+        letter-spacing: 3px;
+        margin: 30px 0;
+        padding: 30px;
+        @include centered;
+        h1{
+            font-size: $catergory;
+        }
+        .category-line{
+            flex: 1;
+            height: 1px;
+            background-color: black;
+        }
+    }
+    .category:nth-child(1){
+        margin-bottom: -70px;
+    }
+    .review-list{
+        @include space-between;
+        .logos{
+            @include centered;
+            width: 30%;
+            gap: 30px;
+            .logo{
+                background-color: $gray;
+                padding: $mainMargin;
+            }
+            .stars{
+                @include space-between;
+                flex-direction: column;
+                gap: 85px;
+                .icons{
+                    color: orange;
+                }
+            }
+        }
+        .description{
+            display: flex;
+            margin-right: 20px;
+            width: 55%;
+            .description-line{
+                height: 120px;
+                width: 140px;
+                border-left: 2px solid black;
+            }
+            span{
+                @include centered;
+                font-size: $simple-text;
+            }
+        }
+    }
+}
+

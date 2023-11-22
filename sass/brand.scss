@@ -1,0 +1,46 @@
+@import "./main";
+@import "./components/nav-bar";
+@import "./components/catagery-card";
+@import "./components/footer";
+
+#container-1 {
+    display: flex;
+    height: 30rem;
+
+    .content-left,
+    .content-right {
+        flex: 2;
+    }
+
+    .content-left {
+        display: flex;
+        flex-direction: column;
+        @include centered;
+        background: $gray;
+    }
+
+    .content-right {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#container-2 {
+    @extend #container-1;
+    margin-top: 100px;
+
+    flex-direction: row-reverse;
+}
+
+#container-3 {
+    @extend #container-1;
+    margin-top: 100px;
+
+}
+
+#container-4 {
+    @extend #container-2;
+    margin-top: 100px;
+
+}

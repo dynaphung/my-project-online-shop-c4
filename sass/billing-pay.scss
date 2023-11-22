@@ -1,0 +1,81 @@
+@import "./variable/body";
+@import './main';
+@import './components/buy-button';
+
+body{
+    @include centered;
+    flex-direction: column;
+}
+#bill-payment {
+    @include centered;
+    margin-top: 100px;
+    gap: $mainMargin;
+    border-radius: $border-radius ;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    height: 25rem;
+    width: 30rem;
+    box-shadow: 0 0px 20px $teal;
+
+}
+.bill-text,
+.pay-text {
+    margin-bottom: $mainMargin;
+    color: $teal;
+}
+
+.user-name,
+.user-email,
+.user-address,
+.user-place {
+    @include flex-column;
+    gap: 10px;
+}
+
+.user-name input,
+.user-email input,
+.user-address input,
+.user-place input {
+    width: 180px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid $teal;
+
+}
+
+.user-name-card,
+.user-code,
+.expire-month {
+    @include flex-column;
+    gap: 15px;
+}
+
+.user-name-card input,
+.user-code input,
+.expire-month input {
+    width: 180px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid $teal;
+}
+
+.card-payment img {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.user-name,
+.user-email,
+.user-address,
+.user-place,
+.user-name-card,
+.user-code,
+.expire-month {
+    font-size: 14px;
+}
+.buy-btn{
+    margin-top: -20px;
+    width: 250px;
+}

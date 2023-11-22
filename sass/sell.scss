@@ -1,0 +1,39 @@
+@import './main';
+@import './components/product-card';
+@import './components/nav-bar';
+@import './components/footer';
+
+
+.clothes,
+.skincares,
+.foods,
+.products{
+    display: flex;
+    flex-direction: column;
+    margin: 0 $mainMargin;
+    .sell{
+        .sell-header{
+            h1{
+                font-size: $catergory ;
+            }
+            letter-spacing: 3px;
+            margin: $mainMargin 0;
+            @include centered;
+            .sell-line{
+                @include centered;
+                flex: 1;
+                height: 1px;
+                background-color: $black;
+            }
+        }
+        .sell-body{
+            margin-bottom: $mainMargin;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 50px;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@import "../group-mixin/group-mixin";
+@import "../variable/variable";
+@import "../main";
+
+section{
+    background: linear-gradient(155deg, rgba(45, 40, 40, 0.618), rgba(8, 8, 8, 0.607)), url(/image/contact-page/contact-group.png);
+    @include background-image;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    .contact-container{
+        width: 100%;
+        display: flex;
+        background: linear-gradient(155deg, rgba(2, 2, 2, 0.447), rgba(2, 0, 0, 0.612));
+        border-radius: $border-radius;
+        padding: 30px;
+        margin-top: 160px;
+        @include responsive(mobile){
+            flex-direction: column;
+        }
+        .contact-us-content{
+            .contact-us-title{
+                flex: 0.6;
+                @include flex-column;
+                gap: 20px;
+                h1{
+                    @include responsive(mobile){
+                        font-size: $sub-title;
+                    }
+                }
+                span{
+                    @include responsive(mobile){
+                        font-size: x-small;
+                    }
+                }  
+            }
+            .contact-us-connect{
+                @include flex-column;
+                gap: 20px;
+                .contacts{
+                    display: flex;
+                    align-items: center;
+                    margin: 20px $mainMargin;
+                    @include responsive(mobile){
+                        margin: 20px 0;
+                    }
+                    gap: 25px;
+                    span{
+                        a{
+                            color: white;
+                        }
+                    }
+                }
+                img{
+                    @include responsive(mobile){
+                        width: 25px;
+                    }
+
+                }
+                
+            }
+        }
+        .contact-us-form{
+            color: white;
+            flex: 0.4;
+            margin: -170px 0 0 40px;
+            @include responsive(mobile){
+                margin: $mainMargin 50px ;
+
+            }
+            form {
+                border-radius: 5px;
+                color: $black;
+                background-color: rgba(255, 255, 255, 0.667);
+                padding: 10px 20px;
+                @include flex-column;
+                h1 {
+                    text-align: center;
+                }
+                .email,
+                .message,
+                .username{
+                    margin: 10px 0px;
+                    border-bottom: 1px solid black;
+                    input{
+                        border: none;
+                        background-color: rgba(255, 255, 255, 0);
+                        width: 300px;
+                        padding: 3px 0px;
+                    }
+                }
+                .send {
+                    display: flex;
+                    align-self: center;
+                    justify-content: center;
+                    width: 50%;
+                    background: $teal;
+                    color: $white;
+                    border: none;
+                    padding: 15px;
+                    border-radius: 5px;
+                    margin: 30px 0 30px 0;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+                .send:hover {
+                    background-color: #000000;
+                    box-shadow: 0px 15px 20px rgba(33, 32, 31, 0.326);
+                    color: #ffffff;
+                    transform: translateY(-7px);
+                } 
+            }  
+        }
+    }
+}
+
+
+

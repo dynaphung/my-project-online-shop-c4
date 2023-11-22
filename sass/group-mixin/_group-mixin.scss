@@ -1,0 +1,40 @@
+
+@import '../variable/variable';
+@mixin centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin space-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin background-image{
+    background-position: center;
+    background-color: cover;
+    background-repeat: no-repeat;
+}
+// responsive
+
+$breakpoint: ( 
+    'mobile': 780px,
+    'tablet': 1024px,
+);
+
+@mixin responsive($size){
+    @media screen and (max-width: map-get($breakpoint, $size)) {
+        @content;
+    }
+}
+
